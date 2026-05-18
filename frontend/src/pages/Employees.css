@@ -1,0 +1,63 @@
+/* src/pages/Employees.css */
+.emp-page { padding: 32px; max-width: 1200px; margin: 0 auto; }
+
+.filter-bar { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; padding: 20px; }
+.search-wrap { position: relative; max-width: 400px; }
+.search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
+.search-input { padding-left: 38px; padding-right: 36px; }
+.clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; display: flex; }
+
+.dept-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.dept-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.dept-btn:hover { border-color: var(--accent); color: var(--text-primary); }
+.dept-btn.active { background: var(--accent-glow); border-color: var(--border-accent); color: var(--accent-light); }
+
+.emp-table { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.table-head-6 {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 2fr 1fr 0.7fr 1fr;
+  padding: 14px 20px;
+  background: var(--bg-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.table-row-6 {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 2fr 1fr 0.7fr 1fr;
+  padding: 14px 20px;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  transition: background 0.2s;
+  font-size: 14px;
+}
+.table-row-6:hover { background: var(--bg-hover); }
+.emp-email { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.skills-cell { display: flex; flex-wrap: wrap; gap: 4px; }
+.more-skills { font-size: 11px; color: var(--text-muted); padding: 2px 6px; }
+.action-btns { display: flex; gap: 6px; }
+.icon-btn { padding: 7px 10px; }
+.empty-state { padding: 48px; text-align: center; color: var(--text-muted); font-size: 15px; }
+
+/* Modal */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.modal-card { width: 100%; max-width: 500px; }
+.modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.modal-header h3 { font-size: 18px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }

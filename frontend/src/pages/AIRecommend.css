@@ -1,0 +1,59 @@
+/* src/pages/AIRecommend.css */
+.ai-page { padding: 32px; max-width: 1200px; margin: 0 auto; }
+.ai-layout { display: grid; grid-template-columns: 360px 1fr; gap: 20px; align-items: start; }
+
+.ai-controls h3, .ai-result h3 {
+  font-size: 16px; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 20px;
+}
+
+.mode-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+.mode-tab {
+  flex: 1; padding: 9px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 13px; font-weight: 500;
+  cursor: pointer; transition: all 0.2s;
+}
+.mode-tab.active { background: var(--accent-glow); border-color: var(--border-accent); color: var(--accent-light); }
+
+.all-info {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px; background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px; color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.all-info strong { color: var(--text-primary); }
+
+.gen-btn { width: 100%; justify-content: center; padding: 12px; font-size: 15px; }
+
+/* Result area */
+.ai-loading { text-align: center; padding: 60px 20px; }
+.ai-pulse {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--accent-glow);
+  margin: 0 auto 16px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+.ai-loading p { color: var(--text-secondary); font-size: 14px; }
+
+.ai-empty {
+  text-align: center; padding: 60px 20px;
+  color: var(--text-muted);
+}
+.ai-empty span { font-size: 48px; display: block; margin-bottom: 12px; }
+.ai-empty p { font-size: 14px; max-width: 280px; margin: 0 auto; line-height: 1.6; }
+
+.ai-output { padding: 4px 0; }
+.ai-heading { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--accent-light); margin: 16px 0 6px; }
+.ai-text { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 4px; }
+.ai-spacer { height: 8px; }
